@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.welcomepage{
+    display: block;
+
+}
+
+ 
+.startpage{
+    display: none;
+    transition: 0.2s ease-in-out;
+}
+.scorepage{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: white;
+    transform: translateY(100%);
+    height: 100vh;
+    background-color:  rgba(0, 2, 35, 1);
+  transition: 0.6s ease-in-out;
+  display: grid;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+ .scorepage .score{
+    font-size:5vw;
+    color: #fffeec;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ }
+.scorepage button {
+    width: 60vw;
+    margin: auto;
+    padding: 20px;
+    font-size: 19px;
+    background-color: rgb(10, 30, 150);
+    border: none;
+    border-radius: 10px;
+    color: white;
+   margin: 10px 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.scorepage button:hover {
+    background-color: purple;
+  }
+#timeui{
+    position: fixed;
+    margin-bottom: 10px;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.gridui{
+    display: grid;
+    grid-template-areas: 'left left left left right right';
+    grid-gap: 10px;
+}
+  .questionui{
+    grid-area: left;
+   
+    padding: 0 20px;
+  }
+ .quizcontainer{
+    padding: 10px 14px; 
+  }
+  .quizcontainer input{
+    font-size: 17px;
+    
+  }
+   .questionbox{
+    font-size: 20px;
+    padding: 5px 0;
+   }
+   .options{
+   
+font-size: 1rem;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   .options label {
+    font-size: 17px;
+   }
+   .option{
+    width: 100%;
+   }
+   .numberflex{
+    grid-area: right;
+   
+   }
+  .questionnumberui{
+   
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .numberbox{
+    padding: 14px 17px;
+  }
+   .numberbox button{
+    background-color: #e7e7e7;
+    color:black;
+    padding:10px 20px;
+    font-size: 20px;
+    border-radius: 17px;
+   }
+   .numberbox button:hover{
+    background-color: #555555;
+    color: white;
+   }
+   .numberbox  a{
+    text-decoration: none;
+   }
+   .correctAnswer{
+    display: none;
+   }
+
+    @media(max-width:900px) {
+
+      .quizcontainer{
+        padding: 7px 10px; 
+      }
+
+
+      .numberbox{
+        padding: 7px 10px;
+      }
+       .numberbox button{
+        background-color: #e7e7e7;
+        color:black;
+        padding:5px 15px;
+        font-size: 17px;
+        border-radius: 17px;
+       }
+    }
+
+    @media(max-width:700px) {
+      .gridui{
+        display: grid;
+        grid-template-areas: 'left left left left left left'
+        'right right right right right right';
+        grid-gap: 10px;
+    }
+    .quizcontainer{
+      padding: 5px 7px; 
+    }
+    }

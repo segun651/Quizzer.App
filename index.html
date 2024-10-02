@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>QuizApp</title>
+</head>
+<body>
+  
+   <div class="container">
+    <div class="row">
+        <div class="welcomepage">
+<h2 class="text-center py-2 "> Welcome to Quizzer</h2>
+<br>
+    <h4 class="form-signin-heading">Generate your quiz</h2>
+ <br>
+ <form  id="myform">
+    <label for="trivia_amount">Number of Questions:</label>
+    <input type="number" name="trivia_amount" id="trivia_amount" 
+    class="form-control" min="1" max="50" value="10" >
+  
+    <br>
+
+    <label for="trivia_category">Select Category: </label>
+    <select name="trivia_category" class="form-control" id="trivia_category">
+        <option value="">Any Category</option>
+        <option value="9">General Knowledge</option><option value="10">Entertainment: Books</option><option value="11">Entertainment: Film</option><option value="12">Entertainment: Music</option
+        ><option value="13">Entertainment: Musicals &amp; Theatres</option>
+        <option value="14">Entertainment: Television</option>
+        <option value="15">Entertainment: Video Games</option>
+        <option value="16">Entertainment: Board Games</option>
+        <option value="17">Science &amp; Nature</option>
+        <option value="18">Science: Computers</option>
+        <option value="19">Science: Mathematics</option>
+        <option value="20">Mythology</option><option value="21">Sports</option><option value="22">Geography</option><option value="23">History</option><option value="24">Politics</option><option value="25">Art</option><option value="26">Celebrities</option><option value="27">Animals</option><option value="28">Vehicles</option><option value="29">Entertainment: Comics</option><option value="30">Science: Gadgets</option><option value="31">Entertainment: Japanese Anime &amp; Manga</option><option value="32">Entertainment: Cartoon &amp; Animations</option>		</select>
+
+    <br>
+
+    <label for="trivia_difficulty">Select Difficulty: </label>
+    <select name="trivia_difficulty" class="form-control" id="trivia_difficulty">
+        <option value="">Any Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <br>
+
+    <label for="trivia_type">Select Type: </label>
+    <select name="trivia_type" class="form-control" id="trivia_type">&gt;
+        <option value="">Any Type</option>
+        <option value="multiple">Multiple Choice</option>
+        <option value="boolean">True / False</option>
+    </select>
+
+    <br>
+    <div class="timepage">
+        <label for="time"> Time:</label>
+<br>
+<br>
+<label for="hrs"> Hours</label>
+   <input type="number" id="hrs" min="0" max="23" class="form-control">
+   <label for="mins">Mins</label>
+  <input type="number" id="mins" min="0" max="59" class="form-control">
+<label for="secs"> Seconds </label>
+  <input type="number"  id="secs" min="0" max="59" class="form-control">
+    </div>
+<br>
+<div class="btncenter d-flex justify-content-center pb-4">
+    <button class="btn btn-lg btn-primary btn-block text-center" type="submit">Generate API URL</button>
+</div>
+   
+ </form>
+    </div> 
+</div>
+</div>
+
+    <div class="startpage">
+  <div id="timeui"></div>
+  <div class="gridui m-4">
+    <div class="questionui"></div>
+    <div class="numberflex">
+        <div class="questionnumberui">
+        </div>
+    </div>
+  </div>
+  <button class=" btn btn-primary m-3 " onclick="Submit()">Submit</button>
+ 
+    </div> 
+
+    <div class="scorepage">
+     <div class="score"></div>
+     <div class="btngroup">
+      
+        <button onclick="TakeAgain()">Take another quiz</button>
+        <button onclick="window.close()">Exit Quiz</button>
+     </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
